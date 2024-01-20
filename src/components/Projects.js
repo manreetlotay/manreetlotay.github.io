@@ -1,9 +1,11 @@
 function Projects() {
     return(
         <section id="projects">
-            <h1>Projects</h1>
-            <div className="realEstate-project-container">
+            <h1>{'<'}My Projects {'/>'}</h1>
+            <div className="realEstate-project-container projectCard">
                 <h2>Project Name</h2>
+                <h4>Languages</h4>
+                <img src=""></img>
                 <h3>Brief Description</h3>
                 <button className="View-GitHub-Btn">View on GitHub</button>
                 <button className="View-Demo-Btn">Watch Demo</button>
@@ -13,9 +15,7 @@ function Projects() {
                     <li>MongoDB</li>
                     <li>Node.js</li>
                 </ul>
-                <div className="project-gallery">
-                    Images of project
-                </div>
+               
             </div>
         </section>
     )
