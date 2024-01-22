@@ -1,9 +1,9 @@
 #about {
     margin: 0px 40px; 
-    padding-bottom: 140px;
+    padding-bottom: 110px;
     display: flex;
     flex-wrap: wrap;
-
+    padding-top: 50px;
     opacity: 0;
     transform: translateX(-100px); /* Initial position off-screen to the left */
     transition: opacity 0.5s, transform 1.5s;

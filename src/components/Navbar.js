@@ -24,9 +24,9 @@ function Navbar() {
 
             <div className={`nav-links-container ${isActive ? 'active' : ''}`} id="navigationLinks">
                 <ul className="nav-links">
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Work</a></li>
-                    <li><a href="/">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#projects">Projects</a></li>
                 </ul>
 
                 <div className="nav-socials">

@@ -1,5 +1,9 @@
 #home {
-    padding: 150px 50px;
+    /* padding: 150px 50px; */
+    padding-top: 150px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .home-text-container {
@@ -17,6 +21,10 @@
     animation: text 1.5s 1;
     position: relative;
     -webkit-text-stroke: 0.1vw #F0E3E3;  
+
+    /*fadeIn animation */
+    opacity: 0; 
+    animation: fadeIn 2s forwards; 
      
 }
 
@@ -39,32 +47,19 @@
     color: #9BA4B5;
     width: 100%;
     letter-spacing: 1px;
-    visibility: hidden;
-    animation: revealText 1s 1 1.5s forwards; /* Delayed animation for h3 */
+
+    /*Fade animation*/
+    opacity: 0; 
+    animation: fadeIn 2s forwards 0.5s; 
+
 }
 
-
-
-@media screen and (min-width: 800px) {
-    @keyframes text {
-        0%{
-            letter-spacing: 2px;
-            margin-bottom: -40px;
-        }
-    
-        40%{
-            letter-spacing: 8px;
-            margin-bottom: -40px;
-        }
-    }
-}
-
-
-@keyframes revealText {
+@keyframes fadeIn {
     to {
-        visibility: visible;
+        opacity: 1; 
     }
 }
+
 
 .home-buttons-container {
     display: flex;
