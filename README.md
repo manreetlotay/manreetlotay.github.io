@@ -1,4 +1,4 @@
-## My personal website, hosted on gitHub pages: https://manreetlotay.github.io/myPortfolio/
+## My personal website hosted on gitHub pages
 
-#Build with React.js
+Build with React.js
 
