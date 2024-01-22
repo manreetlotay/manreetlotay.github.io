@@ -13,12 +13,45 @@ import vscodeLogo from '../images/vscode.png';
 import powerPlatformLogo from '../images/powerPlatform.png';
 import reactjsLogo from '../images/reactjs.png';
 
+import React, { useEffect, useRef } from 'react';
+
 function About() {
+
+
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        const aboutObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                } else {
+                    entry.target.classList.remove('animate-in');
+                }
+            });
+        });
+
+        if (aboutRef.current) {
+            aboutObserver.observe(aboutRef.current);
+        }
+
+        return () => {
+            if (aboutRef.current) {
+                aboutObserver.unobserve(aboutRef.current);
+            }
+        };
+    }, []);
+
+
+
+
+
+
     return(
-        <section id="about">
+        <section id="about" ref={aboutRef}>
             <h1>About Me</h1>
-            <h3 className="education">I am currently a 3rd year <b>Software Engineering</b> student at Concordia University, Montreal, Canada. Here are some technologies I have been working with:</h3>
-            <div className="languages-grid-container">
+            <h3 className="education animate-in">I am currently a 3rd year <b>Software Engineering</b> student at Concordia University, Montreal, Canada. Here are some technologies I have been working with:</h3>
+            <div className="languages-grid-container animate-in">
                 <img className="language-logo" src={javaLogo} alt="logo of java"/> 
                 <img className="language-logo" src={CLogo} alt="logo of C"/>
                 <img className="language-logo" src={CPPLogo} alt="logo of C++"/>

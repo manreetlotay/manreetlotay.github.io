@@ -1,10 +1,38 @@
+import React, { useEffect, useRef } from 'react';
+
 function Work() {
+
+    const workRef = useRef(null);
+
+    useEffect(() => {
+        const workObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                } else {
+                    entry.target.classList.remove('animate-in');
+                }
+            });
+        });
+
+        if (workRef.current) {
+            workObserver.observe(workRef.current);
+        }
+
+        return () => {
+            if (workRef.current) {
+                workObserver.unobserve(workRef.current);
+            }
+        };
+    }, []);
+
+
     return(
-        <section id="work">
-            <h1>Experience</h1>
-            <h2>Developer Analyst Intern <span class="company-name">| Bombardier</span></h2>
-            <h4>SEPT 2022 - DEC 2022</h4>
-            <ul className="work-description">
+        <section id="work" ref={workRef}>
+            <h1 className="animate-in">Experience</h1>
+            <h2 className="animate-in">Developer Analyst Intern <span class="company-name">| Bombardier</span></h2>
+            <h4 className="animate-in">SEPT 2022 - DEC 2022</h4>
+            <ul className="work-description animate-in">
                 <li>Automated the business travel assessment and the internship assessment process for the Legal Services
                     team by designing a user-friendly Microsoft PowerApp that allows employees and interns to upload
                     necessary documents and respond to inquiries associated with their respective requests.</li>

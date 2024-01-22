@@ -311,6 +311,15 @@
     padding-bottom: 140px;
     display: flex;
     flex-wrap: wrap;
+
+    opacity: 0;
+    transform: translateX(-100px); /* Initial position off-screen to the left */
+    transition: opacity 0.5s, transform 1.5s;
+}
+
+#about.animate-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @media screen and (min-width: 1000px) {
@@ -385,13 +394,40 @@
 /********************************WORK*******************************/
 
 
-
-
 #work {
-    /* margin: 0px 70px; */
-    margin: 0px 40px; 
+    margin: 0px 40px;
     padding-bottom: 140px;
+
+    /*to give that translating effect when scroll*/
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s, transform 1.5s;
 }
+
+/*to give that translating effect when scroll (anything of class .animate-in*/
+#work.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#work h1.animate-in,
+#work h2.animate-in,
+#work h4.animate-in,
+#work .work-description.animate-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s, transform 1.5s;
+}
+
+#work h1.animate-in,
+#work h2.animate-in,
+#work h4.animate-in,
+#work .work-description.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 
 @media screen and (min-width: 1000px) {
     #work {
@@ -445,6 +481,7 @@
 .work-description li::marker {
     font-size: 2rem;
     line-height: 1.5;
+    color: #fde0e6;
 }
 
 
@@ -514,11 +551,13 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    /*for scroll animation translation*/
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
 }
 
 .projectCard {
-    
-    /* background-color: #394867; */
     background-color: rgba(33, 42, 62, 10);
     padding: 20px 20px;
     max-width: 500px;
@@ -532,6 +571,32 @@
     /* align-items: center; */
     
 }
+
+/*scroll animation*/
+/* Animation for the entire container */
+.projects-container.animate-in {
+    opacity: 1;
+}
+
+/* Animation for each projectCard */
+.projectCard.animate-in {
+    animation: slideIn 0.5s ease-in-out; /* Use the slideIn animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px); /* Start off-screen to the left */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Move to the original position */
+        opacity: 1;
+    }
+}
+
+
+
+
 
 .projectCard:hover{
     transform: translateY(-8px);
