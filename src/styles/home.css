@@ -1,0 +1,128 @@
+#home {
+    padding: 150px 50px;
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-text-container h1 {
+    font-size: 3.5rem;
+    color: #F1F6F9;
+    width: 100%;
+    letter-spacing: 2px;
+    animation: text 1.5s 1;
+    position: relative;
+    -webkit-text-stroke: 0.1vw #F0E3E3;  
+     
+}
+
+@media screen and (max-width: 800px) {
+    .home-text-container h1 {
+        font-size: calc(2rem + 2vw);
+    }
+}
+
+.highlight-name {
+    color: #dbb6b6;
+    -webkit-text-stroke:0.1vw #eec6c6;
+    
+}
+
+.home-text-container h3 {
+    padding:20px;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #9BA4B5;
+    width: 100%;
+    letter-spacing: 1px;
+    visibility: hidden;
+    animation: revealText 1s 1 1.5s forwards; /* Delayed animation for h3 */
+}
+
+
+
+@media screen and (min-width: 800px) {
+    @keyframes text {
+        0%{
+            letter-spacing: 2px;
+            margin-bottom: -40px;
+        }
+    
+        40%{
+            letter-spacing: 8px;
+            margin-bottom: -40px;
+        }
+    }
+}
+
+
+@keyframes revealText {
+    to {
+        visibility: visible;
+    }
+}
+
+.home-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 5px 30px;
+    flex-wrap: wrap;
+}
+
+.resume-btn, .contact-btn {
+    cursor: pointer;
+    padding: 15px 20px;
+    min-width: 150px;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #394867;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color:#F1F6F9;
+    font-weight: bold;
+    
+}
+
+.resume-btn:hover, .contact-btn:hover {
+    /* border-bottom: 1px solid #517089; */
+    background-color: #48546c;
+}
+
+@media screen and (max-width: 600px) {
+    .home-buttons-container {
+        justify-content: center; 
+    }
+}
+
+.cat-walking {
+    justify-content: center;
+    background-image: url('../images/cat_tiles.png');
+    width: 400px;
+    height: 200px;
+    margin: 50px auto 0;
+    animation: walk 1.5s steps(12) infinite;
+}
+
+@keyframes walk {
+    from{
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -2391px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cat-walking {
+        display: none;
+    }
+    
+}

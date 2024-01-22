@@ -1,0 +1,161 @@
+
+#projects {
+    /* margin: 0px 70px; */
+    margin: 0px 40px; 
+    padding-bottom: 140px;
+}
+
+@media screen and (min-width: 1000px) {
+    #projects {
+     margin: 0 250px;  
+    } 
+ }
+ 
+#projects h1 {
+    padding-bottom: 50px;
+    font-size: 2.7rem;
+    /* color: #F0E3E3; */
+    color: #fde0e6;
+    text-align: left;
+    font-weight: bolder;
+    /* position: relative; */
+    overflow: hidden; 
+    display: inline-block;
+    /* animation: typing 2s steps(15), */
+                /* cursor .4s step-end infinite alternate; */
+}
+
+/*cursor blinking*/
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    } 
+}
+
+/*typing effect*/
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.projects-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    /*for scroll animation translation*/
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+}
+
+.projectCard {
+    background-color: rgba(33, 42, 62, 10);
+    padding: 20px 20px;
+    max-width: 500px;
+    border: 10px;
+    border-radius: 10px;
+    min-height: 300px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*scroll animation*/
+.projects-container.animate-in {
+    opacity: 1;
+}
+
+/* Animation for each projectCard */
+.projectCard.animate-in {
+    animation: slideIn 1s ease-in-out; /* Use the slideIn animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px); /* Start off-screen to the left */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Move to the original position */
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.projectCard:hover{
+    transform: translateY(-8px);
+    background-color: #4d5972;
+    /* -webkit-box-shadow:0 0 5px rgb(234, 234, 239);  */
+}
+
+.projectCard h2 {
+    color: #F1F6F9;
+    text-align: left;
+    margin: 0 10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.projectCard h4 {
+    text-align: left;
+    color: #F1F6F9;
+    font-weight: lighter;
+    padding-bottom: 1.5rem;
+    margin: 0 10px;
+    
+}
+
+.projectCard h3 {
+    text-align: left;
+    padding-bottom: 2rem;
+    margin: 0 10px;
+    color: #9BA4B5;
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.projectCard h3:hover{
+    color: #b7c1d4;
+}
+
+.project-card-links {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin-left: 10px;
+    padding-bottom: 20px;
+}
+
+.project-card-links i {
+    color: #BFCFE7;
+}
+
+.project-card-links i:hover {
+    color: #F8EDFF;
+    transform: translateY(2px);
+}
+
+@media screen and (max-width: 600px) {
+    #projects h1 {
+        font-size: calc(1.4rem + 2vw);
+    }
+
+    .projectCard h2 {
+        font-size: calc(1.2rem + 2vw);
+    }
+
+    .projectCard h4 {
+        font-size: calc(0.4rem + 2vw);
+    }
+
+}

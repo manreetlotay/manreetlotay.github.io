@@ -1,0 +1,22 @@
+#footer {
+    margin: 0px 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+#footer p {
+    color: #c9d8df;
+    font-size: 1rem;
+}
+
+#footer span {
+    font-size: 0.9rem;
+    color: #c9d8df;
+}
+
+#footer a:hover {
+    color: #c9d8df;
+}
