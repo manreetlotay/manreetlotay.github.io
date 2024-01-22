@@ -1,9 +1,9 @@
 function Work() {
     return(
         <section id="work">
-            <h1>{'<'}Experience {'/>'}</h1>
+            <h1>Experience</h1>
             <h2>Developer Analyst Intern <span class="company-name">| Bombardier</span></h2>
-            <h4>Sept 2022 - Dec 2022</h4>
+            <h4>SEPT 2022 - DEC 2022</h4>
             <ul className="work-description">
                 <li>Automated the business travel assessment and the internship assessment process for the Legal Services
                     team by designing a user-friendly Microsoft PowerApp that allows employees and interns to upload

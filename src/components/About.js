@@ -16,7 +16,7 @@ import reactjsLogo from '../images/reactjs.png';
 function About() {
     return(
         <section id="about">
-            <h1>{'<'}About Me /{'>'}</h1>
+            <h1>About Me</h1>
             <h3 className="education">I am currently a 3rd year <b>Software Engineering</b> student at Concordia University, Montreal, Canada. Here are some technologies I have been working with:</h3>
             <div className="languages-grid-container">
                 <img className="language-logo" src={javaLogo} alt="logo of java"/> 
