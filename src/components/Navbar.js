@@ -30,13 +30,13 @@ function Navbar() {
                 </ul>
 
                 <div className="nav-socials">
-                    <a href="/" title="Send me an email" target="_blank" rel="noopener">
+                    <a href="mailto:lotaymk@gmail.com" title="Send me an email" target="_blank" rel="noopener">
                         <i className="fa-solid fa-envelope"></i>
                     </a>
-                    <a href="/" title="Visit my LinkedIn profile" target="_blank" rel="noopener">
+                    <a href="https://www.linkedin.com/in/manreet-kaur-lotay-376ba7223/" title="Visit my LinkedIn profile" rel="noopener noreferrer">
                         <i className="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="/" title="Visit my GitHub profile" target="_blank" rel="noopener">
+                    <a href="https://github.com/manreetlotay" title="Visit my GitHub profile" rel="noopener noreferrer">
                         <i className="fa-brands fa-github"></i>
                     </a>
                 </div>
