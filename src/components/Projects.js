@@ -57,7 +57,7 @@ function Projects() {
         <div className="projects-container animate-in" ref={projectsContainerRef}>
             <div className="projectCard" ref={el => projectCardsRef.current[0] = el}>
                 <h2>Real Estate Website</h2>
-                <h4>{'<'}React.js Express.js MongoDB {'/>'}</h4>
+                <h4>{'<'}React.js | Express.js | MongoDB {'/>'}</h4>
                 {/* <img src={img} alt="project image"></img> */}
                 <h3>A full-stack website featuring a role-based login system, incorporating functionalities such as property listing favoriting, and property visit scheduling. It is implemented with secure authentication using cookies and JWT, enabling CRUD operations on MongoDB collections.</h3>
                 <div className="project-card-links">
@@ -92,6 +92,24 @@ function Projects() {
                 <h4>{'<'}Python {'/>'}</h4>
                 {/* <img src={img} alt="project image"></img> */}
                 <h3>A console-based 4-letter word guessing game using OOP principles.</h3>
+                <div className="project-card-links">
+                    <a href="https://github.com/manreetlotay/wordGuessingGame" title="View source code on gitHub" rel="noopener noreferrer">
+                        <i className="fa-brands fa-github"></i>
+                    </a>
+                    <a href="/" title="View demo on youTube" target="_blank" rel="noopener">
+                        <i className="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div className="projectCard" ref={el => projectCardsRef.current[2] = el}>
+                <h2>Condo Management System</h2>
+                <h4>{'<'}React-Native | Firebase  {'/>'}</h4>
+                {/* <img src={img} alt="project image"></img> */}
+                <h3>A mobile app (compatible on both iOS and Android) with its accompanying website that includes features such as user profiles, condo management, financial reporting,
+                    facility reservations, and request management with notification capabilities. Utilized Jest to achieve 80% coverage and GitHub workflows to automate testing and deployment.
+
+                    </h3>
                 <div className="project-card-links">
                     <a href="https://github.com/manreetlotay/wordGuessingGame" title="View source code on gitHub" rel="noopener noreferrer">
                         <i className="fa-brands fa-github"></i>
