@@ -50,7 +50,7 @@ function About() {
     return(
         <section id="about" ref={aboutRef}>
             <h1>About Me</h1>
-            <h3 className="education animate-in">I am currently a 3rd year <b>Software Engineering</b> student at Concordia University, Montreal, Canada. Here are some technologies I have been working with:</h3>
+            <h3 className="education animate-in">I am currently a 4th year <b>Software Engineering</b> student at Concordia University, Montreal, Canada. Here are some technologies I have been working with:</h3>
             <div className="languages-grid-container animate-in">
                 <img className="language-logo" src={javaLogo} alt="logo of java"/> 
                 <img className="language-logo" src={CLogo} alt="logo of C"/>
