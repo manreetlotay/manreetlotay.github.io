@@ -1,4 +1,4 @@
-## My personal website hosted on gitHub pages
+## My personal website
 
 Built with React.js
 
